@@ -103,8 +103,8 @@ function sendEmails(subjectLine, sheet=SpreadsheetApp.getActiveSheet()) {
           attachments: emailTemplate.attachments,
           inlineImages: emailTemplate.inlineImages
         });
-        // Edits cell to record email sent date
-        out.push([new Date()]);
+        // Edits cell to record email sent
+        out.push([Email_Sent]);
       } catch(e) {
         // modify cell to record error
         out.push([e.message]);
